@@ -1,0 +1,11 @@
+# .github/workflows/reusable-deploy-workflow.yml
+name: Reusable Deploy Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call_reusable_workflow:
+    uses: ucudal/reto-xmas-2024-unicef-backend-python-ia/.github/workflows/deploy-workflow.yml@main
+    with:
+      deployment: "Hello from caller-repo!"
